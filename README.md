@@ -1,7 +1,5 @@
-<details>
-  <summary>
-    <code>哈喽点这里</code>
-  </summary>
-  <br />
-  嗨，我叫杨土豆
-</details>
+<p align="center">
+    <a href="https://github.com/SuLingGG">
+      <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=SuLingGG&hide=["issues","prs"]&show_icons=true" />
+    </a>
+</p>
