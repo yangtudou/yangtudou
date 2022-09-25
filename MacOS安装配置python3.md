@@ -5,10 +5,11 @@
 📝 这篇文章记录
 - 安装
 - 卸载
-- 解决在这个过程中遇到的各种问题
 
 # brew 安装 python3 步骤
 ## 安装 brew
+建议直接使用魔法安装，或者国内源来安装，不然解决问题好烦。
+
 只需要一行命令：
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
