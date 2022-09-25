@@ -18,8 +18,7 @@
 ### 配置全局变量
 在目录 `/Users/$YouMacName` 新建 `.zshrc` 文件
 ```
-echo '# brew 安装的 python3 全局环境配置' >>~/.zshrc \
-&& echo 'export PATH="/usr/local/opt/python/libexec/bin:$PATH"' >>~/.zshrc
+echo -e '# brew 安装的 python3 全局环境配置\nexport PATH="/usr/local/opt/python/libexec/bin:$PATH"' >>~/.zshrc
 ```
 网上有很多说要新建 `.bash_profile` 和 `.zshrc` 两个文件，并且在 `.zshrc` 里加载 `.bash_profile`
 
