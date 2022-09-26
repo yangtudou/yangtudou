@@ -13,21 +13,15 @@ flowchart LR
     classDef default stroke-width:0px;
     classDef important fill:#f96;
     %% 结束
-    
     A([MacOS 安装配置 python3])
-    subgraph 安装
+    subgraph 安装配置
     A == 第一步 ==> B([安装 brew])
-    B -.- B1["/bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'"]
     A == 第二步 ==> C([安装 python3])
     C -- 第一步 -->C1(["配置全局变量 #9829;"]):::important
     C -- 第二步 -->C2([开始安装])
-    C1 -.- D1["在 /Users/$YouMacName/.zshrc 文件里添加\nexport PATH="/usr/local/opt/python/libexec/bin:$PATH""]
-    C2 -.- D2[brew install python]
-    end
-    subgraph 配置相关
     A -.-> D([" virtualenv\n安装虚拟环境"])
-    A -.-> E([卸载 python3])
     end
+    A -.-> E([卸载 python3])
     %% 链接
     click B "https://brew.sh/" "brew 官网地址"
 ```
