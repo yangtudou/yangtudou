@@ -7,6 +7,7 @@
 - 卸载
 
 # 流程图
+
 ```mermaid
 flowchart LR
     %% 定义全局的样式
