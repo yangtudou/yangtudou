@@ -15,8 +15,8 @@ flowchart LR
     %% 结束
     A([MacOS 安装配置 python3])
     subgraph 安装配置
-    A === 第一步 ==> B([安装 brew])
-    A === 第二步 ==> C([安装 python3])
+    A == 第一步 ==> B([安装 brew])
+    A == 第二步 ==> C([安装 python3])
     C --- 第一步 --->C1(["配置全局变量 #9829;"]):::important
     C --- 第二步 --->C2([开始安装])
     A -.-> D([" virtualenv\n安装虚拟环境"])
