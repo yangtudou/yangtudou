@@ -23,11 +23,11 @@ flowchart LR
     end
     A -.-> E([卸载 python3])
     %% 链接
-    click B "https://brew.sh/" "brew 官网地址"
+    click B href "#brew" "brew"
 ```
 
 # brew 安装 python3 步骤
-## 安装 brew
+## <a id="brew">安装 brew</a>
 建议直接使用魔法安装，或者国内源来安装，不然解决问题好烦。
 
 只需要一行命令：
