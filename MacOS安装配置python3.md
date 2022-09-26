@@ -18,16 +18,16 @@ flowchart LR
     subgraph 安装
     A == 第一步 ==> B([安装 brew])
     A == 第二步 ==> C([安装 python3])
-    C -- 第一步 -->C1(["配置全局变量 #9829;"]):::important
+    C -- 第一步-->C1(["配置全局变量 #9829;"]):::important
     C -- 第二步 -->C2([开始安装])
     end
     subgraph 命令
     B1["/bin/bash -c #quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)#quot;"]
     D1["echo -e #apos;#35; brew 安装的 python3 全局环境配置\nexport PATH=#quot;/usr/local/opt/python/libexec/bin:$PATH#quot;#apos; >>~/.zshrc"]
     D2[brew install python]
-    B1 -.- B
-    D1 -.- C1
-    D2 -.- C2
+    B1 <-.-> B
+    D1 <-.-> C1
+    D2 <-.-> C2
     end
     subgraph virtualenv
     D(["virtualenv\n安装虚拟环境"])
