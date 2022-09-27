@@ -25,14 +25,14 @@ flowchart LR
     M1["/bin/bash -c #quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)#quot;"]
     M2["echo -e #apos;#35; brew 安装的 python3 全局环境配置\nexport PATH=#quot;/usr/local/opt/python/libexec/bin:$PATH#quot;#apos; >>~/.zshrc"]
     M3[brew install python]
+    M1 <-..-> B
+    M2 <-..-> C1
+    M3 <-..-> C2
+    end
     M4[brew uninstall --force python3]
     M5[pip install virtualenv]
-    M1 <-.-> B
-    M2 <-.-> C1
-    M3 <-.-> C2
-    M4 <-.-> E
+    M4 <-..-> E
     M5 <-..-> D
-    end
     D(["virtualenv\n安装虚拟环境"])
     E([卸载 python3])
 ```
