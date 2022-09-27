@@ -11,8 +11,8 @@
 ```mermaid
 flowchart LR
     %% 定义全局的样式
-    classDef default stroke-width:0px;
-    classDef important fill:#f96;
+    classDef default stroke-width:0px
+    classDef important fill:#f96
     %% 结束
     A([MacOS 安装配置 python3])
     subgraph 安装
@@ -22,19 +22,19 @@ flowchart LR
     C -- 第二步 -->C2([开始安装])
     end
     subgraph 命令
-    B1["/bin/bash -c #quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)#quot;"]
-    D1["echo -e #apos;#35; brew 安装的 python3 全局环境配置\nexport PATH=#quot;/usr/local/opt/python/libexec/bin:$PATH#quot;#apos; >>~/.zshrc"]
-    D2[brew install python]
-    B1 <-.-> B
-    D1 <-.-> C1
-    D2 <-.-> C2
+    M1["/bin/bash -c #quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)#quot;"]
+    M2["echo -e #apos;#35; brew 安装的 python3 全局环境配置\nexport PATH=#quot;/usr/local/opt/python/libexec/bin:$PATH#quot;#apos; >>~/.zshrc"]
+    M3[brew install python]
+    M4[brew uninstall --force python3]
+    M5[pip install virtualenv]
+    M1 <-.-> B
+    M2 <-.-> C1
+    M3 <-.-> C2
+    M4 <-.-> E
+    M5 <-..-> D
     end
-    subgraph virtualenv
     D(["virtualenv\n安装虚拟环境"])
-    end
-    subgraph 卸载 python3
     E([卸载 python3])
-    end
 ```
 
 # brew 安装 python3 步骤
