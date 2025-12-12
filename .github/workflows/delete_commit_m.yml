@@ -1,0 +1,31 @@
+name: 清除提交历史
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6.0.0
+        with:
+          ref: main
+
+      - name: 重新提交 main 分支
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          git checkout --orphan clearhistory
+          git branch -D main
+          git checkout --orphan main
+
+          git add .
+          git commit -m "ㅤ"
+          git push -f -u origin main
+
+      - name: 清除工作流
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 0
+          keep_minimum_runs: 0
