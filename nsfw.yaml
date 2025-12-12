@@ -1,0 +1,20 @@
+metadata:
+  version: 1.0.0
+  last_updated: '2025-12-12'
+
+contents_library:
+  - code_number: SSIS-865
+    local_file: true
+  - code_number: SSIS-831
+    local_file: true
+  - code_number: IPX-666
+    local_file: true
+
+actors:
+  - name: 葵司
+    code_numbers:
+      - SSIS-865
+      - SSIS-831
+  - name: 相泽南
+    code_numbers:
+      - IPX-666
