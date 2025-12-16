@@ -9,6 +9,18 @@ contents_library:
     local_file: true
   - code_number: IPX-666
     local_file: true
+  - code_number: IPZZ-451
+    local_file: true
+  - code_number: IPZZ-709
+    local_file: true
+  - code_number: ABF-169
+    local_file: true
+  - code_number: MEYD-931
+    local_file: true
+  - code_number: SSIS-834
+    local_file: true
+  - code_number: MIDV-547
+    local_file: true
 
 actors:
   - name: 葵司
